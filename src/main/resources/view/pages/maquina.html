@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscrição das Máquinas e Implementos</title>
+
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
+<link rel="stylesheet" type="text/css" href="../css/maquina.css">
+</head>
+<body>
+	<header id="header">
+		<nav id="nav">
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true"
+				aria-controls="menu" aria-expanded="false">
+				Menu <span id="hamburger"></span>
+			</button>
+			<ul id="menu" role="menu">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="./emprestimo.html">Emprestimo</a></li>
+				<li><a href="./localizacao.html">Localidades</a></li>
+				<li><a href="./maquina.html">Máquinas</a></li>
+				<li><a href="./ajuda.html">Ajuda</a></li>
+			</ul>
+		</nav>
+		<a id="logo" href="./user.html">USUÁRIO-01</a>
+	</header>
+
+	<script src="../scripts/script.js"></script>
+
+	<div class="div-header">
+		<h1>Inscrição das Máquinas e Implementos</h1>
+	</div>
+
+	<main class="body-first">
+		<form class="form-main">
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="maquina">Nova Máquina</label> <input type="text"
+						name="maquina" id="maquina" placeholder="Maquina" maxlength="70"
+						required>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="campo">
+					<label for="descricao-maquina">Descrição da Máquina</label>
+					<textarea name="descricao-maquina" id="descricao-maquina"
+						maxlength="105" rows="3"></textarea>
+				</div>
+			</fieldset>
+			<button type="submit" class="botao">Concluído</button>
+		</form>
+	</main>
+
+	<footer>
+		<h1>&copy;Copyright - Gestão de Máquinas</h1>
+	</footer>
+</body>
+</html>

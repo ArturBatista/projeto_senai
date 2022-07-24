@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscrição das Máquinas</title>
+
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
+<link rel="stylesheet" type="text/css" href="../css/emprestimo.css">
+</head>
+<body>
+	<header id="header">
+		<nav id="nav">
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true"
+				aria-controls="menu" aria-expanded="false">
+				Menu <span id="hamburger"></span>
+			</button>
+			<ul id="menu" role="menu">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="./emprestimo.html">Emprestimo</a></li>
+				<li><a href="./localizacao.html">Localidades</a></li>
+                <li><a href="./maquina.html">Máquinas</a></li>
+				<li><a href="./ajuda.html">Ajuda</a></li>
+			</ul>
+		</nav>
+		<a id="logo" href="./user.html">USUÁRIO-01</a>
+	</header>
+
+	<script src="../scripts/script.js"></script>
+
+	<div class="div-header">
+		<h1>Iscrição de máquinas</h1>
+	</div>
+
+	<main class="body-first">
+		<form class="form-main">
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="usuario">Usuário</label> <input type="text"
+						name="usuario" id="usuario" value="USUÁRIO-01" disabled required>
+				</div>
+				<div class="campo">
+					<label for="nome-pessoa">Para quem?</label> <input type="text"
+						name="nome-pessoa" id="nome-pessoa" placeholder="Nome"
+						maxlength="80" required>
+				</div>
+			</fieldset>
+			<fieldset class="form-flex">
+				<div class="campo margin-pedding-right">
+					<label for="endereco">Endereço</label> <select name="endereco"
+						id="endereco" required>
+						<option selected disabled value="">Selecione</option>
+						<option value="endereco-1">Santa Terezinha</option>
+						<option value="endereco-2">Santa Rosa</option>
+						<option value="endereco-3">Linha Sortica</option>
+						<option value="endereco-4">Linha Azeredo</option>
+						<option value="endereco-5">Esquina Sherer</option>
+					</select>
+				</div>
+				<div class="campo">
+					<label for="maquina">Selecione a maquina</label> <select
+						name="maquina" id="maquina" required>
+						<option selected disabled value="">Selecione</option>
+						<option value="maquina-1">Trator MF275</option>
+						<option value="maquina-2">Trator Jooh Deere</option>
+						<option value="maquina-3">Ensiladeira</option>
+					</select>
+				</div>
+			</fieldset>
+			<fieldset class="grupo">
+				<div class="campo padding-right">
+					<label for="data-retirada">Data da retirada</label> <input
+						type="date" name="data-retirada" id="data-retirada" required>
+				</div>
+				<div class="campo padding-right">
+					<label for="data-emprestimo">Previsto para entrega</label> <input
+						type="date" name="data-emprestimo" id="data-emprestimo" required>
+				</div>
+				<div class="campo">
+					<label for="horas--fazer">Horas a fazer</label> <input
+						type="number" name="horas-fazer" id="horas-fazer" required>
+				</div>
+			</fieldset>
+			<div class="campo">
+				<label for="observacoes">Observações</label>
+				<textarea name="observacoes" id="observacoes" maxlength="105"
+					rows="3"></textarea>
+			</div>
+			<button type="submit" class="botao">Concluído</button>
+		</form>
+	</main>
+
+	<footer>
+		<h1>&copy;Copyright - Gestão de Máquinas</h1>
+	</footer>
+</body>
+</html>
