@@ -3,6 +3,7 @@ package br.com.senai.uc8projeto.model;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 public class Solicitante {
 	
@@ -10,6 +11,7 @@ public class Solicitante {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
+	@OneToOne
 	private Localizacao localizacao;
 	private String telefone;
 	
