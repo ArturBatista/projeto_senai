@@ -19,8 +19,7 @@ public class Emprestimo {
 	private int id;
 	@OneToOne
 	private Usuario usuario;
-	@OneToOne
-	private Solicitante solicitante;
+	private String solicitante;
 	@OneToOne
 	private Localizacao localizacao;
 	@OneToOne
@@ -43,10 +42,10 @@ public class Emprestimo {
 		this.usuario = usuario;
 	}
 	
-	public Solicitante getSolicitante() {
+	public String getSolicitante() {
 		return solicitante;
 	}
-	public void setSolicitante(Solicitante solicitante) {
+	public void setSolicitante(String solicitante) {
 		this.solicitante = solicitante;
 	}
 	
