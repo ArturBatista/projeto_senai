@@ -42,13 +42,5 @@ public class Solicitante {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
-	public String getCpf_cnpj() {
-		return cpf_cnpj;
-	}
-	public void setCpf_cnpj(String cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
-	}
-	private String cpf_cnpj;
 
 }
