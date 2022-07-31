@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Example</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Example</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
 </head>
 <body>
-    <header id="header">
-        <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
-                <span id="hamburger"></span>
-            </button>
-            <ul id="menu" role="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./emprestimo.html">Emprestimo</a></li>
-                <li><a href="./localizacao.html">Localidades</a></li>
-                <li><a href="./maquina.html">Máquinas</a></li>
-                <li><a href="./ajuda.html">Ajuda</a></li>
-            </ul>
-        </nav>
-        <a id="logo" href="./usuario.html">USUÁRIO-01</a>
-    </header>
+	<header id="header">
+		<nav id="nav">
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true"
+				aria-controls="menu" aria-expanded="false">
+				Menu <span id="hamburger"></span>
+			</button>
+			<ul id="menu" role="menu">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="./emprestimo.html">Emprestimo</a></li>
+				<li><a href="./localizacao.html">Localidades</a></li>
+				<li><a href="./maquina.html">Máquinas</a></li>
+				<li><a href="./solicitante.html">Solicitantes</a></li>
+				<li><a href="./ajuda.html">Ajuda</a></li>
+			</ul>
+		</nav>
+		<a id="logo" href="./usuario.html">USUÁRIO-01</a>
+	</header>
 
-    <script src="../scripts/script.js"></script>
+	<script src="../scripts/script.js"></script>
 
-    <div class="div-header">
-        <h1>Gerenciamento de usuário</h1>
-    </div>
+	<div class="div-header">
+		<h1>Gerenciamento de usuário</h1>
+	</div>
 
-    <main class="body-first">        
-        
-    </main>
-    
-    <footer>
-        <h1>&copy;Copyright - Gestão de Máquinas</h1>
-    </footer>
+	<main class="body-first">
+		<form class="form-main">
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="usuario-nome">Nome do Usuário no Sistema</label> <input
+						type="text" name="nome-usuario" id="nome-usuario"
+						placeholder="Nome do Servidor" maxlength="80" required>
+				</div>
+				<div class="campo">
+					<label for="usuario-senha">Senha para o Usuário</label> <input
+						type="text" name="usuario-senha" id="usuario-senha"
+						placeholder="Crie uma senha" maxlength="80" required>
+				</div>
+				<div class="campo">
+					<label for="usuario-email">E-mail do Servidor</label> <input
+						type="text" name="usuario-email" id="usuario-email"
+						placeholder="Digite seu e-mail" maxlength="80" required>
+				</div>
+				<div class="campo">
+					<label for="usuario-cpf-cnpj">Digite seu CPF</label> <input
+						type="text" name="usuario-cpf-cnpj" id="usuario-cpf-cnpj"
+						placeholder="Digite seu CPF" maxlength="80" required>
+				</div>
+			</fieldset>
+		</form>
+	</main>
+
+	<footer>
+		<h1>&copy;Copyright - Gestão de Máquinas</h1>
+	</footer>
 </body>
 </html>

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
+    <link rel="stylesheet" type="text/css" href="../css/localizacao.css">
 </head>
 <body>
     <header id="header">
@@ -30,15 +31,30 @@
     <script src="../scripts/script.js"></script>
 
     <div class="div-header">
-        <h1>Localidades</h1>
+        <h1>Solicitantes</h1>
     </div>
 
     <main class="body-first">        
         <form class="form-main">
             <fieldset class="grupo">
                 <div class="campo">
-                    <label for="nome-pessoa">Nova localidade</label>
-                    <input type="text" name="localidade" id="localidade" placeholder="localidade" maxlength="80" required>
+                    <label for="nome-solicitante">Nome do solicitante</label>
+                    <input type="text" name="nome-solicitante" id="nome-solicitante" placeholder="Digite o nome" maxlength="80" required>
+                </div>
+                <div class="campo">
+					<label for="maquina">Selecione a localidade do solicitante</label> <select
+						name="maquina" id="maquina" required>
+						<option selected disabled value="">Selecione</option>
+						<option value="endereco-1">Santa Terezinha</option>
+						<option value="endereco-2">Santa Rosa</option>
+						<option value="endereco-3">Linha Sortica</option>
+						<option value="endereco-4">Linha Azeredo</option>
+						<option value="endereco-5">Esquina Sherer</option>
+					</select>
+				</div>
+				<div class="campo">
+                    <label for="tel-solicitante">Telefone do solicitante</label>
+                    <input type="text" name="tel-solicitante" id="tel-solicitante" placeholder="Digite o telefone" maxlength="80" required>
                 </div>
             </fieldset>
             <button type="submit" class="botao">Concluído</button>
