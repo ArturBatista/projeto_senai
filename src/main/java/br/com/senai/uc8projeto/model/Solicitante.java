@@ -1,10 +1,9 @@
 package br.com.senai.uc8projeto.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "solicitante")
 public class Solicitante {
 	
 	@Id
