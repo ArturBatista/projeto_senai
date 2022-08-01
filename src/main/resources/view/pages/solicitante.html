@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição das Localidades</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/todo-conteudo.css">
-    <link rel="stylesheet" type="text/css" href="../css/localizacao.css">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css" th:href="@{css/resetcss}">
+    <link rel="stylesheet" type="text/css" href="./css/todo-conteudo.css" th:href="@{css/todoconteudocss}">
 </head>
 <body>
     <header id="header">
@@ -17,7 +15,7 @@
                 <span id="hamburger"></span>
             </button>
             <ul id="menu" role="menu">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./emprestimo.html">Emprestimo</a></li>
                 <li><a href="./localizacao.html">Localidades</a></li>
                 <li><a href="./maquina.html">Máquinas</a></li>
@@ -28,7 +26,7 @@
         <a id="logo" href="./usuario.html">USUÁRIO-01</a>
     </header>
 
-    <script src="../scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
 
     <div class="div-header">
         <h1>Solicitantes</h1>

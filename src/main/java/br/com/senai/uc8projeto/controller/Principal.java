@@ -6,6 +6,7 @@ import br.com.senai.uc8projeto.service.EmprestimoService;
 import br.com.senai.uc8projeto.service.SolicitanteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
@@ -13,7 +14,7 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @CrossOrigin("*")
-@RestController
+@Controller
 public class Principal {
 
 	@Autowired
@@ -22,11 +23,6 @@ public class Principal {
 	@Autowired
 	private SolicitanteService solicitanteService;
 
-	@GetMapping(value="/")
-	public String create(){
-		return "Retorno";
-		//return ResponseEntity.ok().build();
-	}
 
 	@GetMapping(value="/emprestimo/{id}")
 	public ResponseEntity<Emprestimo> findById(@PathVariable Integer id){
