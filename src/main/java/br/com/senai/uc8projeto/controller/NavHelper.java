@@ -7,49 +7,50 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NavHelper {
 	@RequestMapping(value="/")
 	public String index(){
-		return "pages/index.html";
+		return "pages/index";
 		//return ResponseEntity.ok().build();
 	}
 	
-	@RequestMapping(value="/index.html")
+	
+	@RequestMapping(value="/index")
 	public String home(){
-		return "pages/index.html";
+		return "pages/index";
 		//return ResponseEntity.ok().build();
 	}
 	
-	@RequestMapping(value="/ajuda.html")
+	@RequestMapping(value="/ajuda")
 	public String ajuda(){
-		return "pages/ajuda.html";
+		return "pages/ajuda";
 		
 	}
 	
-	@RequestMapping(value="/emprestimo.html")
+	@RequestMapping(value="/emprestimo")
 	public String emprestimo(){
-		return "pages/emprestimo.html";
+		return "pages/emprestimo";
 		
 	}
 	
-	@RequestMapping(value="/localizacao.html")
+	@RequestMapping(value="/localizacao")
 	public String localizacao(){
-		return "pages/localizacao.html";
+		return "pages/localizacao";
 		
 	}
 	
-	@RequestMapping(value="/maquina.html")
+	@RequestMapping(value="/maquina")
 	public String maquina(){
-		return "pages/maquina.html";
+		return "pages/maquina";
 		
 	}
 	
-	@RequestMapping(value="/solicitante.html")
+	@RequestMapping(value="/solicitante")
 	public String solicitante(){
-		return "pages/solicitante.html";
+		return "pages/solicitante";
 		
 	}
 	
-	@RequestMapping(value="/usuario.html")
+	@RequestMapping(value="/usuario")
 	public String usuario(){
-		return "pages/usuario.html";
+		return "pages/usuario";
 		
 	}
 	
@@ -58,4 +59,13 @@ public class NavHelper {
 		return "scripts/script.js";
 		
 	}
+	
+
+	
+	@RequestMapping(value="/indexN")
+	public String indexN(){
+		return "pages/index";
+		//return ResponseEntity.ok().build();
+	}
+	
 }

@@ -16,15 +16,15 @@
                 <span id="hamburger"></span>
             </button>
             <ul id="menu" role="menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./emprestimo.html">Emprestimo</a></li>
-                <li><a href="./localizacao.html">localidades</a></li>
-                <li><a href="./maquina.html">Máquinas</a></li>
-                <li><a href="./solicitante.html">Solicitantes</a></li>
-                <li><a href="./ajuda.html">Ajuda</a></li>
+                <li><a href="./index.html" th:href="@{index}">Home</a></li>
+                <li><a href="./emprestimo.html" th:href="@{emprestimo}">Emprestimo</a></li>
+                <li><a href="./localizacao.html" th:href="@{localizacao}">localidades</a></li>
+                <li><a href="./maquina.html" th:href="@{maquina}">Máquinas</a></li>
+                <li><a href="./solicitante.html" th:href="@{solicitante}">Solicitantes</a></li>
+                <li><a href="./ajuda.html" th:href="@{ajuda}">Ajuda</a></li>
             </ul>
         </nav>
-        <a id="logo" href="./pages/usuario.html">USUÁRIO-01</a>
+        <a id="logo" href="./pages/usuario.html" th:href="@{usuario}">USUÁRIO-01</a>
     </header>
 
     <script src="./scripts/script.js" th:src="@{scripts/script}"></script>
