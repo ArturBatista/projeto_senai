@@ -20,23 +20,11 @@ public class Principal {
 	@Autowired
 	private EmprestimoService emprestimoServiceservice;
 
-	@Autowired
-	private SolicitanteService solicitanteService;
-
-
 	@GetMapping(value="/emprestimo/{id}")
 	public ResponseEntity<Emprestimo> findById(@PathVariable Integer id){
 		Emprestimo obj = emprestimoServiceservice.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@PostMapping(value="/solicitante")
-	public ResponseEntity<Solicitante> create(@Valid @RequestBody Solicitante obj){
-		obj = solicitanteService.create(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-
-		//return ResponseEntity.created(uri).body(obj);
-		return ResponseEntity.created(uri).build();
-	}
 	
 }

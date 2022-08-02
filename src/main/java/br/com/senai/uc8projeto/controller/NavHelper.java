@@ -42,11 +42,11 @@ public class NavHelper {
 		
 	}
 	
-	@RequestMapping(value="/solicitante")
-	public String solicitante(){
-		return "pages/solicitante";
-		
-	}
+//	@RequestMapping(value="/solicitante")
+//	public String solicitante(){
+//		return "pages/solicitante";
+//		
+//	}
 	
 	@RequestMapping(value="/usuario")
 	public String usuario(){
@@ -65,6 +65,12 @@ public class NavHelper {
 	@RequestMapping(value="/indexN")
 	public String indexN(){
 		return "pages/index";
+		//return ResponseEntity.ok().build();
+	}
+	
+	@RequestMapping(value="/agendamento")
+	public String agendamento(){
+		return "pages/agendamento";
 		//return ResponseEntity.ok().build();
 	}
 	
