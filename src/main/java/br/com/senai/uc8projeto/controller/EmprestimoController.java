@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.senai.uc8projeto.model.Emprestimo;
 import br.com.senai.uc8projeto.service.EmprestimoService;
+import br.com.senai.uc8projeto.service.LocalizacaoService;
+import br.com.senai.uc8projeto.service.MaquinaService;
+import br.com.senai.uc8projeto.service.UsuarioService;
 
 @CrossOrigin("*")
 @Controller
@@ -19,6 +22,16 @@ public class EmprestimoController {
 	@Autowired
 	private EmprestimoService servico;
 	
+	@Autowired
+	private MaquinaService maquinaServico;
+	
+	@Autowired
+	private UsuarioService usuarioServico;
+	
+	@Autowired
+	private LocalizacaoService localizacaoServico;
+	
+	 
 	@GetMapping(value="/emprestimo")
 	public String listar(Model modelo){
 		modelo.addAttribute("emprestimo", servico.listar());
@@ -29,6 +42,11 @@ public class EmprestimoController {
 	public String cadastrar(Model modelo) {
 		Emprestimo emprestimo = new Emprestimo();
 		modelo.addAttribute("emprestimo", emprestimo);
+		modelo.addAttribute("maquina", maquinaServico.listar());
+		
+		modelo.addAttribute("localizacao", localizacaoServico.listar());
+		modelo.addAttribute("usuario", usuarioServico.listar());
+		
 		return "pages/emprestimo/cadastro";
 	}
 	

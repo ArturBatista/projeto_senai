@@ -22,6 +22,21 @@ public class CssProvider {
 		return "css/emprestimo.css";
 	}
 	
+	@RequestMapping(value="/emprestimo/css/emprestimocss")
+	public String esmprestimoOptCss() {
+		return "css/emprestimo.css";
+	}
+	
+	@RequestMapping(value="/emprestimo/editar/css/emprestimocss")
+	public String esmprestimoEditarCss() {
+		return "css/emprestimo.css";
+	}
+	
+	@RequestMapping(value="emprestimo/cadastrar/css/emprestimocss")
+	public String esmprestimoCadastrarCss() {
+		return "css/emprestimo.css";
+	}
+	
 	@RequestMapping(value="/css/maquinacss")
 	public String maquinaCss() {
 		return "css/maquina.css";
@@ -59,6 +74,21 @@ public class CssProvider {
 	
 	@RequestMapping(value="/solicitante/editar/css/todoconteudocss")
 	public String todoConteudoSolicitanteEditCss() {
+		return "css/todo-conteudo.css";
+	}
+	
+	@RequestMapping(value="/emprestimo/css/todoconteudocss")
+	public String todoConteudoEmprestimoCss() {
+		return "css/todo-conteudo.css";
+	}
+	
+	@RequestMapping(value="/emprestimo/cadastrar/css/todoconteudocss")
+	public String todoConteudoEmprestimoCadastrarCss() {
+		return "css/todo-conteudo.css";
+	}
+	
+	@RequestMapping(value="/emprestimo/editar/css/todoconteudocss")
+	public String todoConteudoEmprestimoEditarCss() {
 		return "css/todo-conteudo.css";
 	}
 }
