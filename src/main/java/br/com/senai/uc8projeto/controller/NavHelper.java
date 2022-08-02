@@ -36,17 +36,31 @@ public class NavHelper {
 		
 	}
 	
-	@RequestMapping(value="/maquina")
-	public String maquina(){
-		return "pages/maquina";
+
+	@RequestMapping(value="/maquina/voltar")
+	public String maquinaVoltar(){
+		return "redirect:../maquina";
 		
 	}
 	
-//	@RequestMapping(value="/solicitante")
-//	public String solicitante(){
-//		return "pages/solicitante";
-//		
-//	}
+	@RequestMapping(value="/maquina/editar/voltar")
+	public String maquinaEditVoltar(){
+		return "redirect:../";
+		
+	}
+	
+	@RequestMapping(value="/solicitante/voltar")
+	public String solicitante(){
+		return "redirect:../solicitante";
+		
+	}
+	
+	@RequestMapping(value="/solicitante/editar/voltar")
+	public String solicitanteEditVoltar(){
+		return "redirect:../";
+		
+	}
+	
 	
 	@RequestMapping(value="/usuario")
 	public String usuario(){

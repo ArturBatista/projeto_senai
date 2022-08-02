@@ -1,10 +1,7 @@
 package br.com.senai.uc8projeto.service;
 
-import br.com.senai.uc8projeto.model.Emprestimo;
 import br.com.senai.uc8projeto.model.Maquina;
-import br.com.senai.uc8projeto.repositorio.EmprestimoRepository;
 import br.com.senai.uc8projeto.repositorio.MaquinaRepository;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
