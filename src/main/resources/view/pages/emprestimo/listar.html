@@ -50,13 +50,13 @@
                 	<td th:text=${emprestimo.id}>id</td>
                     <td th:text=${emprestimo.solicitante}>Solicitante</td>
                     <td th:text=${emprestimo.maquina.descricao}>Máquina</td>
-                    <td th:text=${emprestimo.maquina.dataDevolucao}>Data</td>
+                    <td th:text=${emprestimo.dataDevolucao}>Data</td>
                     
                     <td>
                         <a th:href="@{/emprestimo/delete/{id}(id=${emprestimo.id})}"
                             class="btn btn-outline-success">Concluir</a>
-                        <a th:href="@{/emprestimo/editar/{id}(id=${emprestimo.id})}"
-                            class="btn btn-outline-warning">Editar</a>
+                      <!-- <a th:href="@{/emprestimo/editar/{id}(id=${emprestimo.id})}"
+                            class="btn btn-outline-warning">Editar</a> -->
                     </td>
                 </tr>
             </tbody>

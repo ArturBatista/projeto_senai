@@ -30,6 +30,12 @@ public class NavHelper {
 		
 	}
 	
+	@RequestMapping(value="/emprestimo/voltar")
+	public String emprestimoVoltar(){
+		return "redirect:../";
+		
+	}
+	
 	@RequestMapping(value="/localizacao")
 	public String localizacao(){
 		return "pages/localizacao";
