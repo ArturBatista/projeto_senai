@@ -32,16 +32,15 @@ public class NavHelper {
 	
 	@RequestMapping(value="/emprestimo/voltar")
 	public String emprestimoVoltar(){
-		return "redirect:../";
+		return goBack();
 		
 	}
 	
-	@RequestMapping(value="/localizacao")
-	public String localizacao(){
-		return "pages/localizacao";
+	@RequestMapping(value="/localizacao/voltar")
+	public String localizacaoVoltar(){
+		return "redirect:../localizacao";
 		
-	}
-	
+	}	
 
 	@RequestMapping(value="/maquina/voltar")
 	public String maquinaVoltar(){
@@ -51,7 +50,7 @@ public class NavHelper {
 	
 	@RequestMapping(value="/maquina/editar/voltar")
 	public String maquinaEditVoltar(){
-		return "redirect:../";
+		return goBack();
 		
 	}
 	
@@ -63,7 +62,7 @@ public class NavHelper {
 	
 	@RequestMapping(value="/solicitante/editar/voltar")
 	public String solicitanteEditVoltar(){
-		return "redirect:../";
+		return goBack();
 		
 	}
 	
@@ -92,6 +91,10 @@ public class NavHelper {
 	public String agendamento(){
 		return "pages/agendamento";
 		//return ResponseEntity.ok().build();
+	}
+	
+	String goBack() {
+		return "redirect:../";
 	}
 	
 }

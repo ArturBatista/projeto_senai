@@ -57,6 +57,11 @@ public class CssProvider {
 		return "css/todo-conteudo.css";
 	}
 	
+	@RequestMapping(value="/localizacao/css/todoconteudocss")
+	public String todoConteudoLocalizacaoCadastrarCss() {
+		return "css/todo-conteudo.css";
+	}
+	
 	@RequestMapping(value="/maquina/css/todoconteudocss")
 	public String todoConteudoMaquinaCss() {
 		return "css/todo-conteudo.css";

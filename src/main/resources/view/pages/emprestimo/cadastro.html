@@ -48,7 +48,7 @@
                         <label for="idSolicitante">Solicitante</label>
                         <select class="form-control" id="idSolicitante" th:field="${emprestimo.solicitante}">
                             <option value="0">Selecionar Solicitante</option>
-                            <option th:each="solicitante : ${solicitante}" th:value="${solicitante.id}" th:text="${solicitante.nome}"></option>
+                            <option th:each="solicitante : ${solicitante}" th:value="${solicitante.nome}" th:text="${solicitante.nome}"></option>
                         </select>
                     </div>
 
