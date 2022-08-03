@@ -32,56 +32,62 @@
         </div>
 
         <div class="row">
-            <div class="col-md-10 mx-auto order-md-1">
+            <div class="col-md-5 mx-auto order-md-1">
                 <h4 class="mb-3">Cadastro de Empréstimo</h4>
                 <form class="needs-validation" th:action="@{/emprestimo}" th:object="${emprestimo}" method="POST">
-                    <div class="row">
-                    <div class="campo">
-					<label for="dropusuario">Usuário</label> 
-					<<select class="argin-pedding-right" th:field="${emprestimo.usuario}"  id="dropusuario">
-				    <option value="0">Selecionar Usuário</option>
-				    <option th:each="usuario : ${usuario}" th:value="${usuario.id}" th:text="${usuario.nome}"></option>
-	    			</select>
-							</div>
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName">Nome Solicitante</label>
-                            <input type="text" name="emprestimo" th:field="*{solicitante}" class="form-control" required>
-                        </div>
-                        
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="sUsuario">Usuário</label>-->
+<!--                        <select class="form-control" id="sUsuario" th:field="${emprestimo.usuario}">-->
+<!--                            <option value="0">Selecionar Usuário</option>-->
+<!--                            <option th:each="usuario : ${usuario}" th:value="${usuario.id}" th:text="${usuario.nome}"></option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+
+                    <div class="form-group">
+                        <label for="idSolicitante">Solicitante</label>
+                        <select class="form-control" id="idSolicitante" th:field="${emprestimo.solicitante}">
+                            <option value="0">Selecionar Solicitante</option>
+                            <option th:each="solicitante : ${solicitante}" th:value="${solicitante.id}" th:text="${solicitante.nome}"></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idLocalidade">Localidade</label>
+                        <select class="form-control" id="idLocalidade" th:field="${emprestimo.localizacao}">
+                            <option value="0">Selecionar Endereco</option>
+                            <option th:each="localizacao : ${localizacao}" th:value="${localizacao.id}" th:text="${localizacao.local}"></option>
+                        </select>
                     </div>
                     
-                    <div class="campo margin-pedding-right">
-					<label for="endereco">Endereço</label> 
-					<select class="argin-pedding-right" th:field="${emprestimo.localizacao}"  id="endereco">
-				    <option value="0">Selecionar Endereco</option>
-				    <option th:each="localizacao : ${localizacao}" th:value="${localizacao.id}" th:text="${localizacao.local}"></option>
-	    			</select>
-				</div>
-                    <div class="row">
+
+                    <div class="form-flex">
                     
-                    <div class="campo padding-right">
-					<label for="data-retirada">Data da retirada</label> <input
-						type="date" name="data-retirada" id="data-retirada" th:field="${emprestimo.dataEmprestimo}" required>
+                    <div class="form-group">
+					<label for="data-retirada">Data da retirada</label>
+                        <input class="form-control" type="date" name="data-retirada" id="data-retirada" th:field="${emprestimo.dataEmprestimo}" required>
 					</div>
-					<div class="campo padding-left">
+					<div class="">
 	            			<label for="dtdevolucao">Data Devolução</label>
-						    <input type="date" id="dtdevolucao" name="devolucao" th:field="${emprestimo.dataDevolucao}" required>
-					<br>
-					
-					</div>
-					
-					<div class="campo">
-					<label for="horas--fazer">Horas a fazer</label> <input
-						type="number" name="horas-fazer" id="horas-fazer" required th:field="${emprestimo.horasAFazer}">
-					</div>
+						    <input class="form-control" type="date" id="dtdevolucao" name="devolucao" th:field="${emprestimo.dataDevolucao}" required>
 
 					</div>
-                    <div class="row">
-					<select class="argin-pedding-right" th:field="${emprestimo.maquina}"  id="dropOperator">
-				    <option value="0">Selecionar Máquina</option>
-				    <option th:each="maquina : ${maquina}" th:value="${maquina.id}" th:text="${maquina.descricao}"></option>
-	    			</select>
-					</div>
+
+                        <div class="form-group">
+                            <label for="idhoras">Horas a fazer</label>
+                            <input type="number" class="form-control" id="idhoras"  required th:field="${emprestimo.horasAFazer}">
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idMaquina">Máquina</label>
+                        <select class="form-control" id="idMaquina" th:field="${emprestimo.maquina}">
+                            <option value="0">Selecionar Máquina</option>
+                            <option th:each="maquina : ${maquina}" th:value="${maquina.id}" th:text="${maquina.descricao}"></option>
+                        </select>
+                    </div>
                      
 
                     <hr class="mb-4">
