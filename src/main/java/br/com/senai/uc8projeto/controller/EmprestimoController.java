@@ -1,6 +1,5 @@
 package br.com.senai.uc8projeto.controller;
 
-import br.com.senai.uc8projeto.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.senai.uc8projeto.model.Emprestimo;
+import br.com.senai.uc8projeto.service.EmprestimoService;
+import br.com.senai.uc8projeto.service.LocalizacaoService;
+import br.com.senai.uc8projeto.service.MaquinaService;
+import br.com.senai.uc8projeto.service.SolicitanteService;
+import br.com.senai.uc8projeto.service.UsuarioService;
 
 @CrossOrigin("*")
 @Controller

@@ -1,0 +1,60 @@
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="./css/todo-conteudo.css" th:href="@{css/todoconteudocss}">
+  	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Cadastro de Localidades</title>
+</head>
+
+<body>
+<header id="header">
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a th:href="@{voltar}">Voltar</a></li>
+            </ul>
+        </nav>
+        <a id="logo">USUÁRIO-01</a>
+    </header>
+    <div class="container">
+        <div class="py-5 text-center">
+
+            <h2>Cadastro de Localidades</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 mx-auto order-md-1">
+                <h4 class="mb-3">Insira o município de atuação</h4>
+                <form class="needs-validation" th:action="@{/localizacao}" th:object="${localizacao}" method="POST">
+                    <div class="row">
+                    
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Nome do Município</label>
+                            <input type="text" name="localizacao" th:field="*{local}" class="form-control" required>
+                        </div>
+                        
+                       
+                    </div>
+                  
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">©2022 Gestão de Máquinas</p>
+        </footer>
+    </div>
+</body>
+
+</html>

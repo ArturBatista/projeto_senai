@@ -17,33 +17,13 @@ public class CssProvider {
 		return "css/ajuda.css";
 	}
 	 
-	@RequestMapping(value="/css/emprestimocss")
+	@RequestMapping(value={"/css/emprestimocss", "*/css/emprestimocss"})
 	public String esmprestimoCss() {
 		return "css/emprestimo.css";
 	}
 	
-	@RequestMapping(value="/emprestimo/css/emprestimocss")
-	public String esmprestimoOptCss() {
-		return "css/emprestimo.css";
-	}
-	
-	@RequestMapping(value="/emprestimo/editar/css/emprestimocss")
-	public String esmprestimoEditarCss() {
-		return "css/emprestimo.css";
-	}
-	
-	@RequestMapping(value="emprestimo/cadastrar/css/emprestimocss")
-	public String esmprestimoCadastrarCss() {
-		return "css/emprestimo.css";
-	}
-	
-	@RequestMapping(value="/css/maquinacss")
+	@RequestMapping(value={"/css/maquinacss","*/css/maquinacss"})
 	public String maquinaCss() {
-		return "css/maquina.css";
-	}
-	
-	@RequestMapping(value="/maquina/css/maquinacss")
-	public String maquinaOptsCss() {
 		return "css/maquina.css";
 	}
 	
@@ -51,49 +31,9 @@ public class CssProvider {
 	public String resetCss() {
 		return "css/reset.css";
 	}
-	
-	@RequestMapping(value="/css/todoconteudocss")
-	public String todoConteudoCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/localizacao/css/todoconteudocss")
-	public String todoConteudoLocalizacaoCadastrarCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/maquina/css/todoconteudocss")
+
+	@RequestMapping(value={"/css/todoconteudocss", "*/css/todoconteudocss"})
 	public String todoConteudoMaquinaCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/maquina/editar/css/todoconteudocss")
-	public String todoConteudoMaquinaEditCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/solicitante/css/todoconteudocss")
-	public String todoConteudoSolicitanteCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/solicitante/editar/css/todoconteudocss")
-	public String todoConteudoSolicitanteEditCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/emprestimo/css/todoconteudocss")
-	public String todoConteudoEmprestimoCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/emprestimo/cadastrar/css/todoconteudocss")
-	public String todoConteudoEmprestimoCadastrarCss() {
-		return "css/todo-conteudo.css";
-	}
-	
-	@RequestMapping(value="/emprestimo/editar/css/todoconteudocss")
-	public String todoConteudoEmprestimoEditarCss() {
 		return "css/todo-conteudo.css";
 	}
 }

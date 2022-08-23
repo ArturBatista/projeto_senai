@@ -18,6 +18,12 @@ public class NavHelper {
 		//return ResponseEntity.ok().build();
 	}
 	
+	@RequestMapping(value="*/index")
+	public String backhome(){
+		return "redirect:../index";
+		//return ResponseEntity.ok().build();
+	}
+	
 	@RequestMapping(value="/ajuda")
 	public String ajuda(){
 		return "pages/ajuda";
@@ -94,7 +100,7 @@ public class NavHelper {
 	}
 	
 	String goBack() {
-		return "redirect:../";
+		return "redirect:*/../";
 	}
 	
 }

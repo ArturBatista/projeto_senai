@@ -38,7 +38,7 @@
                     <div class="row">
                     <div class="campo">
 					<label for="dropusuario">Usuário</label> 
-					<<select class="argin-pedding-right" th:field="${emprestimo.usuario}"  id="dropusuario">
+					<select class="argin-pedding-right" th:field="${emprestimo.usuario}"  id="dropusuario">
 				    <option value="0">Selecionar Usuário</option>
 				    <option th:each="emprestimo : ${emprestimo}" th:value="*{usuario.id}" th:text="${usuario.nome}"></option>
 	    			</select>
